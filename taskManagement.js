@@ -20,3 +20,9 @@ function addTask() {
     tasks.push(task);
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
+// Supprime une tâche
+function deleteTask(id) {
+    tasks = tasks.filter(task => task.id !== id);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    displayTasks();
+}
