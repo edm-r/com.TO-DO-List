@@ -24,5 +24,9 @@ function addTask() {
 function deleteTask(id) {
     tasks = tasks.filter(task => task.id !== id);
     localStorage.setItem('tasks', JSON.stringify(tasks));
-    displayTasks();
+}
+// Marque une tâche comme terminée
+function toggleTask(id) {
+    tasks = tasks.map(task => task.id === id ? {...task, completed: !task.completed} : task);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
 }
