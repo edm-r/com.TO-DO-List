@@ -30,3 +30,8 @@ function toggleTask(id) {
     tasks = tasks.map(task => task.id === id ? {...task, completed: !task.completed} : task);
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
+// Mise à jour du compteur de tâches restantes
+function updateCounter() {
+    const remainingTasks = tasks.filter(task => !task.completed).length;
+    document.getElementById('taskCounter').innerText = `${remainingTasks} tâche(s) restante(s)`;
+}
