@@ -23,9 +23,14 @@
             <button onclick="filterTasks('all')">Toutes</button>
             <button onclick="filterTasks('completed')">Terminées</button>
             <button onclick="filterTasks('uncompleted')">Non terminées</button>
-            <button >Travail</button>
-            <button >Personnel</button>
-            <button >Autre</button>
+            <button onclick="filterByCategory('Travail')">Travail</button>
+            <button onclick="filterByCategory('Personnel')">Personnel</button>
+            <button onclick="filterByCategory('Autre')">Autre</button>
+        </div>
+
+        <div class="task-search">
+            <input type="text" id="searchTask" placeholder="Rechercher..." oninput="searchTask()">
+        </div>
         </div>
 
         <div class="task-search">
