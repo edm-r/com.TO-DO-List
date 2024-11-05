@@ -5,3 +5,8 @@ function filterTasks(filter) {
                           tasks;
     displayTasks(filteredTasks);
 }
+// Filtrer les tâches par catégorie
+function filterByCategory(category) {
+    const filteredTasks = tasks.filter(task => task.category === category);
+    displayTasks(filteredTasks);
+}
