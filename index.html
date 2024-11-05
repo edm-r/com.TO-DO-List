@@ -20,9 +20,9 @@
         </div>
 
         <div class="filter-options">
-            <button >Toutes</button>
-            <button >Terminées</button>
-            <button >Non terminées</button>
+            <button onclick="filterTasks('all')">Toutes</button>
+            <button onclick="filterTasks('completed')">Terminées</button>
+            <button onclick="filterTasks('uncompleted')">Non terminées</button>
             <button >Travail</button>
             <button >Personnel</button>
             <button >Autre</button>
@@ -39,5 +39,7 @@
         </div>
     </div>
     <script src="taskManagement.js"></script>
+    <script src="displayTask.js"></script>
+    <script src="filterAndSearch.js"></script>
     </body>
 </html>

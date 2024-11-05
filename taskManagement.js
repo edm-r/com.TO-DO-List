@@ -19,16 +19,19 @@ function addTask() {
 
     tasks.push(task);
     localStorage.setItem('tasks', JSON.stringify(tasks));
+    displayTasks();
 }
 // Supprime une tâche
 function deleteTask(id) {
     tasks = tasks.filter(task => task.id !== id);
     localStorage.setItem('tasks', JSON.stringify(tasks));
+    displayTasks();
 }
 // Marque une tâche comme terminée
 function toggleTask(id) {
     tasks = tasks.map(task => task.id === id ? {...task, completed: !task.completed} : task);
     localStorage.setItem('tasks', JSON.stringify(tasks));
+    displayTasks();
 }
 // Mise à jour du compteur de tâches restantes
 function updateCounter() {
