@@ -15,7 +15,7 @@ function checkOverdueTasks() {
 // Fonction pour envoyer une notification pour une tâche spécifique
 function notifyTask(taskName) {
     if (!("Notification" in window)) {
-        console.log("Les notifications ne sont pas supportées par ce navigateur.");
+        console.log("Les notifications ne sont pas supportées par ce navigateur");
         return;
     }
 
@@ -27,7 +27,7 @@ function notifyTask(taskName) {
                 icon: 'images/icon.png' // Remplacez par le chemin de votre icône si nécessaire
             });
         } else {
-            console.log("Permission de notification non accordée.");
+            console.log("Permission de notification non accordée");
         }
     });
 }
